@@ -1,36 +1,105 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Paytm SmartShop AI Prototype
+
+Clickable fintech-style prototype built with Next.js, React, and Tailwind CSS.
+
+## What This Prototype Includes
+
+- Landing screen with product overview and KPIs
+- Merchant onboarding flow (virtual shop setup)
+- Product and inventory setup with add/edit/delete
+- Customer discovery (nearby shop search)
+- Chat-based ordering panel with AI parsing simulation
+- Auto-generated billing screen
+- Simulated Paytm payment flow (link -> pay -> success)
+- Merchant dashboard with incoming paid order
+- Mini ERP view with stock auto-update logs
+- Analytics and reports dashboard
+- Demo Mode autoplay for full end-to-end showcase
+- Loading states and empty states for polished UX
+
+## Tech Stack
+
+- Next.js (App Router)
+- React
+- Tailwind CSS
+- TypeScript
+- Mock local state only (no backend)
 
 ## Getting Started
 
-First, run the development server:
+1. Install dependencies:
+
+```bash
+npm install
+```
+
+2. Start development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+3. Open:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```text
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Demo Flow
 
-## Learn More
+You can present in two ways:
 
-To learn more about Next.js, take a look at the following resources:
+1. Manual click-through using sidebar navigation.
+2. One-click autoplay using `Demo Mode: Auto Journey` in the sidebar.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The autoplay simulates:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. Merchant setup
+2. Inventory setup
+3. Customer discovery
+4. Chat order parsing
+5. Bill generation
+6. Payment success
+7. Merchant dashboard notification
+8. ERP stock update
+9. Analytics refresh
 
-## Deploy on Vercel
+## Project Structure
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```text
+src/
+  app/
+    globals.css
+    layout.tsx
+    page.tsx
+  components/
+    smartshop/
+      charts.tsx
+      screen-meta.ts
+      sidebar.tsx
+      smartshop-prototype.tsx
+      ui.tsx
+      screens/
+        analytics-screen.tsx
+        billing-screen.tsx
+        chat-screen.tsx
+        dashboard-screen.tsx
+        discovery-screen.tsx
+        erp-screen.tsx
+        inventory-screen.tsx
+        landing-screen.tsx
+        onboarding-screen.tsx
+        payment-screen.tsx
+  data/
+    mock-data.ts
+  lib/
+    prototype-utils.ts
+  types/
+    prototype.ts
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Notes
+
+- No authentication, no payment gateway, and no backend calls are used.
+- All screens are connected through local mock state for realistic demo behavior.
+- Inventory and analytics update automatically after successful payment simulation.

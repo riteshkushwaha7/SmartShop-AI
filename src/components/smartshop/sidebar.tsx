@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { ScreenId } from "@/types/prototype";
 import { AppButton } from "@/components/smartshop/ui";
 
@@ -57,6 +58,19 @@ export function Sidebar({ active, onNavigate, onRunDemo, demoRunning }: SidebarP
           </button>
         ))}
       </nav>
+
+      <div className="mt-auto rounded-2xl border border-[#d7e5ff] bg-[#f4f8ff] p-3">
+        <p className="text-xs font-semibold uppercase tracking-wide text-[#5b719c]">Hackathon Assets</p>
+        <Link
+          href="/pitch"
+          target="_blank"
+          rel="noreferrer"
+          className="mt-2 block rounded-xl bg-[#e6efff] px-3 py-2 text-sm font-semibold text-[#1e4d9f] transition hover:bg-[#dbe9ff]"
+        >
+          Open Pitch Assets
+        </Link>
+        <p className="mt-1 text-[11px] text-[#60749d]">Video walkthrough + presentation file</p>
+      </div>
     </aside>
   );
 }

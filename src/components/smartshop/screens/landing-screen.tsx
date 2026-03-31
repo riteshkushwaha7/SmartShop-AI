@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { AppButton, LinearProgress, StatCard, SurfaceCard } from "@/components/smartshop/ui";
 import { customerJourneyScreens, merchantJourneyScreens, screenMeta } from "@/components/smartshop/screen-meta";
 import { formatCurrency } from "@/lib/prototype-utils";
@@ -45,6 +46,14 @@ export function LandingScreen({
               <AppButton variant="ghost" onClick={onRunDemo} disabled={demoRunning}>
                 {demoRunning ? "Demo Running" : "Run Demo Mode"}
               </AppButton>
+              <Link
+                href="/pitch"
+                target="_blank"
+                rel="noreferrer"
+                className="rounded-2xl bg-[#e9f2ff] px-4 py-2.5 text-sm font-semibold text-[#1d4ca0] transition hover:bg-[#dce9ff]"
+              >
+                Pitch Assets
+              </Link>
             </div>
           </div>
 
